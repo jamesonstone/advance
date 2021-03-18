@@ -1,10 +1,10 @@
 # Advance
 
-Exploring Django Migrations with Upgrade in [Kind](https://kind.sigs.k8s.io/)
+Exploring Django Migrations with Upgrade and Rollback in [Kind](https://kind.sigs.k8s.io/)
 
 ## Motivation
 
-In flight migration with Django in a distributed environment are difficult and require
+Executing migrations in a distributed environment requires
 
 ## Getting Started
 

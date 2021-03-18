@@ -26,6 +26,11 @@ push:
 	docker push jstone28/advance:latest
 .PHONY: push
 
+deploy:
+	kubectl apply -f manifests/configmap.yaml
+	kubectl apply -f manifests/deployment.yaml
+.PHONY: deploy
+
 run-server:
 	python manage.py runserver
 .PHONY: run-server

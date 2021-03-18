@@ -17,6 +17,17 @@ spec:
       labels:
         app: advance
         release: advance-release
+    initContainers:
+    - name: migrations
+      image: jstone28/advanced:latest
+      imagePullPolicy: Always
+      args:
+      - /bin/bash
+      - -cx
+      - ./manage.py migrate
+      envFrom:
+        - configMapRef:
+            name: advance-configmap
     spec:
       containers:
         - name: advance
@@ -30,3 +41,4 @@ spec:
             - configMapRef:
                 name: advance-configmap
 ...
+
