@@ -17,6 +17,10 @@ kind create cluster
 
 The write up is available in [NOTES.md](./docs/NOTES.md)
 
+## Sources
+
+Most of the django app is derived from [sample-django](https://github.com/digitalocean/sample-django) by digital ocean
+
 ## Maintainer
 
 🚀 me
