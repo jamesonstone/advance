@@ -1,0 +1,5 @@
+#!/bin/sh
+
+echo "Migrating!"
+
+echo "Done"

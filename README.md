@@ -1,4 +1,6 @@
-# Advance
+# Outcome Tentatively Achieved. Stepping Away From the Completion of This PoC
+
+## Advance
 
 Exploring Django Migrations with Upgrade and Rollback in [Kind](https://kind.sigs.k8s.io/)
 

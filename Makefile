@@ -14,10 +14,6 @@ delete-postgres:
 	kubectl delete -f manifests/postgres.yaml
 .PHONY: delete-postgres
 
-docker-run:
-	docker run -p 8000:8000 --rm jstone28/advance
-.PHONY: delete-postgres
-
 build:
 	docker build -t jstone28/advance:latest .
 .PHONY: build
@@ -25,6 +21,10 @@ build:
 push:
 	docker push jstone28/advance:latest
 .PHONY: push
+
+run:
+	docker run -p 8000:8000 --rm jstone28/advance
+.PHONY: delete-postgres
 
 deploy:
 	kubectl apply -f manifests/configmap.yaml
