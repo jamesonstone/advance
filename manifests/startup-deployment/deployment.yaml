@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: advance
+  labels:
+    app: advance
+    release: advance
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: advance
+      release: advance-release
+  template:
+    metadata:
+      labels:
+        app: advance
+        release: advance-release
+    spec:
+      containers:
+        - name: advance
+          image: jstone28/advance:latest
+          imagePullPolicy: Always
+          ports:
+            - name: http
+              containerPort: 8000
+              protocol: TCP
+          envFrom:
+            - configMapRef:
+                name: advance-configmap
+...
